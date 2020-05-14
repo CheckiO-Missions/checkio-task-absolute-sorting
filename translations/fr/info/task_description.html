@@ -8,7 +8,7 @@
 <p>
     La liste
     {% if "python" in interpreter|lower %}
-    (un tuple)
+    (un list)
     {% endif %}
     contient plusieurs nombres. Vous devez trier ces nombres, par ordre croissant de valeur absolue.
     Par exemple, la s&eacute;quence (-20, -5, 10, 15) sera tri&eacute;e comme suit : (-5, 10, 15, -20).
@@ -51,15 +51,18 @@
     <p>
         <strong>Exemple : </strong>
     </p>
-    <pre class="brush: python">{% if interpreter.slug == "js-node" %}
-absoluteSorting((-20, -5, 10, 15)) == [-5, 10, 15, -20] # or (-5, 10, 15, -20)
-absoluteSorting((1, 2, 3, 0)) == [0, 1, 2, 3]
-absoluteSorting((-1, -2, -3, 0)) == [0, -1, -2, -3]
+    {% if interpreter.slug == "js-node" %}
+<pre class="brush: javascript">absoluteSorting([-20, -5, 10, 15]) == [-5, 10, 15, -20]
+absoluteSorting([1, 2, 3, 0]) == [0, 1, 2, 3]
+absoluteSorting([-1, -2, -3, 0]) == [0, -1, -2, -3]
+</pre>
 {% else %}
-checkio((-20, -5, 10, 15)) == [-5, 10, 15, -20] # or (-5, 10, 15, -20)
-checkio((1, 2, 3, 0)) == [0, 1, 2, 3]
-checkio((-1, -2, -3, 0)) == [0, -1, -2, -3]
-{% endif %}</pre>
+<pre class="brush: python">checkio([-20, -5, 10, 15]) == [-5, 10, 15, -20]
+checkio([1, 2, 3, 0]) == [0, 1, 2, 3]
+checkio([-1, -2, -3, 0]) == [0, -1, -2, -3]
+</pre>
+{% endif %}
+</div>
 </div>
 
 <p class="for_info_only">

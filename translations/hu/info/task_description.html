@@ -9,7 +9,10 @@
 </p>
 
 <p>
-    A tömb (tuple) különböző számokat tartalmaz. Ezt a tömböt rendezni kell az elemek 
+    A tömb 
+    {% if "python" in interpreter|lower %}
+    (a list)
+    {% endif %} különböző számokat tartalmaz. Ezt a tömböt rendezni kell az elemek 
     abszolút értéke szerint növekvő sorrendbe! Például: a (-20, -5, 10, 15) sorozat 
     rendezés után (-5, 10, 15, -20) sorozattá alakul át. Az Ön függvényének egy listát
     (list) vagy n-es számsort (tuple) kell visszaadni.
@@ -53,15 +56,19 @@
     <p>
         <strong>Példák:</strong>
     </p>
-    <pre class="brush: python">{% if interpreter.slug == "js-node" %}
-absoluteSorting((-20, -5, 10, 15)) == [-5, 10, 15, -20] # or (-5, 10, 15, -20)
-absoluteSorting((1, 2, 3, 0)) == [0, 1, 2, 3]
-absoluteSorting((-1, -2, -3, 0)) == [0, -1, -2, -3]
+    {% if interpreter.slug == "js-node" %}
+<pre class="brush: javascript">absoluteSorting([-20, -5, 10, 15]) == [-5, 10, 15, -20]
+absoluteSorting([1, 2, 3, 0]) == [0, 1, 2, 3]
+absoluteSorting([-1, -2, -3, 0]) == [0, -1, -2, -3]
+</pre>
 {% else %}
-checkio((-20, -5, 10, 15)) == [-5, 10, 15, -20] # or (-5, 10, 15, -20)
-checkio((1, 2, 3, 0)) == [0, 1, 2, 3]
-checkio((-1, -2, -3, 0)) == [0, -1, -2, -3]
-{% endif %}</pre>
+<pre class="brush: python">checkio([-20, -5, 10, 15]) == [-5, 10, 15, -20]
+checkio([1, 2, 3, 0]) == [0, 1, 2, 3]
+checkio([-1, -2, -3, 0]) == [0, -1, -2, -3]
+</pre>
+{% endif %}
+</div>
+</div>
 </div>
 
 <p class="for_info_only">
