@@ -1,15 +1,29 @@
-<body data-author="bryukh">
+<body data-author="Doppelok">
 <div class="question-answer">
     <div class="question">
         I have no idea how to start solving this mission
     </div>
     <div class="answer">
-        First, read about <a href="http://docs.python.org/2/library/functions.html#sorted">sorted</a> and
-    <a href="http://docs.python.org/2/library/functions.html#abs">abs</a>.
-<pre class="brush: python">
-abs(5) == abs(-5) == 5
-sorted([1, 5, 2, -3]) == [-3, 1, 2, 5]
-    </pre>
+        First, read about thies functions <a href="http://docs.python.org/2/library/functions.html#sorted">sorted()</a> and
+    <a href="http://docs.python.org/2/library/functions.html#abs">abs()</a>. >
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        I have gone halfway through. Need help!
+    </div>
+    <div class="answer">
+        Look how work sorted() and abs():
+        <pre class="brush: python">
+a = abs(-5)  # Returns the absolute value of a number
+b = sorted([1, 5, 2, -3])  # Returns a sorted iterable object
+print(a)
+print(b)
+
+# output:
+5
+[-3, 1, 2, 5]
+        </pre>
     </div>
 </div>
 <div class="question-answer">
@@ -17,23 +31,66 @@ sorted([1, 5, 2, -3]) == [-3, 1, 2, 5]
         I need some help to proceed with the mission
     </div>
     <div class="answer">
-        You should try to use <a href="https://wiki.python.org/moin/HowTo/Sorting/#Key_Functions">the key parameter for sorting</a>.
+        You should try to use <a href="https://wiki.python.org/moin/HowTo/Sorting/#Key_Functions">the "key" parameter for sorted function</a>.
 
 <pre class="brush: python">
-#sort by last digit for numbers from 10 to 99 only
-sorted([11, 20, 54, 73], key=lambda x: str(x)[1]) == [20, 11, 73, 54]
-#sort lists by sums
-sorted([[90, 11], [99, 1], [200], [30, 50, 50]], key=sum) == [[99, 1], [90, 11], [30, 50, 50], [200]]
+#For example, sort lists by sums.
+c = sorted([[90, 11], [99, 1], [200], [30, 50, 50]], key=sum)
+# Function "sum" in "key" will be executed for each element to decide the order.
+print(c)
+
+# output
+[[99, 1], [90, 11], [30, 50, 50], [200]]
     </pre>
 "key" doesn't change elements.
+    </div>
+<div class="question-answer">
+    <div class="question">
+        One last question. How my final solution will look like?
+    </div>
+    <div class="answer">
+        <pre class="brush: python">
+def checkio(values: list) -> list:
+
+    return sorted(values, key=abs)
+</div>
+<div class="question-answer">
+    <div class="question">
+        I want to be the best of the best PROGRAMMER!!! SHOW ME MORE SOLUTIONS!!1!!!11!
+    </div>
+    <div class="answer">
+        Okay, okay! That's the spirit!=)
+        This solution use lambda-function. You can see, that our previous solution we can write in one-line expression.
+        <pre class="brush: python">
+checkio=lambda n:sorted(n,key=abs)
+        </pre>
     </div>
 </div>
 <div class="question-answer">
     <div class="question">
-        I am gone half way through. Need help!
+        I want more!
     </div>
     <div class="answer">
-        Look carefully at the last hint and first hint, then place your "key".
+        Look at this solution. You can combine sorted function and lamda in def-function.
+        <pre class="brush: python">
+def checkio(numbers_array: tuple) -> list:
+    return sorted(numbers_array, key=lambda x: abs(x))
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        I said more!
+    </div>
+    <div class="answer">
+        Look, look! In general, you don't need to use sorted function.
+        If you have deal with lists use list method "list.sort()".
+        But careful, this method change the list, but return "None".
+        <pre class="brush: python">
+def checkio(values: list) -> list:
+    values.sort(key=lambda x:abs(x))
+    return values
+        </pre>
     </div>
 </div>
 
