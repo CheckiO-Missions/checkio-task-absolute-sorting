@@ -1,0 +1,100 @@
+<body data-author="Doppelok">
+<div class="question-answer">
+    <div class="question">
+        Я не знаю, як розпочати вирішення цієї місії
+    </div>
+    <div class="answer">
+        Спочатку, почитай про функції <a href="http://docs.python.org/2/library/functions.html#sorted">sorted()</a> та
+    <a href="http://docs.python.org/2/library/functions.html#abs">abs()</a>. >
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Я застряг. Мені потрібна маленька підказка.
+    </div>
+    <div class="answer">
+        Ось приклад як працює sorted() та abs():
+        <pre class="brush: python">
+a = abs(-5)  # Повертає абсолютне значення числа
+b = sorted([1, 5, 2, -3])  # Повертає відсортований ітерований об’єкт
+print(a)
+print(b)
+
+# output:
+5
+[-3, 1, 2, 5]
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Мені потрібна допомога, щоб продовжити місію
+    </div>
+    <div class="answer">
+        Спробуй використати <a href="https://wiki.python.org/moin/HowTo/Sorting/#Key_Functions">
+        параметр "key" в функції sorted</a>.
+
+<pre class="brush: python">
+# Наприклад відсортувати по величині суми елементів.
+c = sorted([[90, 11], [99, 1], [200], [30, 50, 50]], key=sum)
+# Функція "sum" в "key" буде виконуватись для кожного елемент
+# і по її результату буде відбуватись сортування.
+print(c)
+
+# output
+[[99, 1], [90, 11], [30, 50, 50], [200]]
+    </pre>
+"key" не змінює елементи.
+    </div>
+<div class="question-answer">
+    <div class="question">
+        Останнє запитання. Як має виглядати мій фінальний код?
+    </div>
+    <div class="answer">
+        <pre class="brush: python">
+def checkio(values: list) -> list:
+
+    return sorted(values, key=abs)
+</div>
+<div class="question-answer">
+    <div class="question">
+        Я хочу бути кращим з кращих ПРОГРАМІСТІВ!!! ПОКАЗАЖИ МЕНІ БІЛЬШЕ РІШЕНЬ!!1!!!11!
+    </div>
+    <div class="answer">
+        Добре, добре! Оце настрій!=)
+        Це рішення використовує lambda-функцію. Бачиш, що наше попереднє рішення можна записати в однорядковий вираз.
+        <pre class="brush: python">
+checkio = lambda n: sorted(n, key=abs)
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Я хочу більше!
+    </div>
+    <div class="answer">
+        Подивись на цей розв'язок. Ти можеш поєднати функцію sorted та lamda в def-функції.
+        <pre class="brush: python">
+def checkio(numbers_array: list) -> list:
+    return sorted(numbers_array, key=lambda x: abs(x))
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Я кажу, більше!
+    </div>
+    <div class="answer">
+        Дивись, дивись! Взагалі, ти можеш не використовувати функцію sorted.
+        Якщо ти маєш справу зі списком, можеш використати метод списків "list.sort()".
+        Але обережно, цей метод змінює сам список, але повертає у відповідь "None".
+        <pre class="brush: python">
+def checkio(values: list) -> list:
+    values.sort(key=lambda x:abs(x))
+    return values
+        </pre>
+    </div>
+</div>
+
+
+</body>

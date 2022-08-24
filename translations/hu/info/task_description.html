@@ -56,17 +56,7 @@
     <p>
         <strong>Példák:</strong>
     </p>
-    {% if interpreter.slug == "js-node" %}
-<pre class="brush: javascript">absoluteSorting([-20, -5, 10, 15]) == [-5, 10, 15, -20]
-absoluteSorting([1, 2, 3, 0]) == [0, 1, 2, 3]
-absoluteSorting([-1, -2, -3, 0]) == [0, -1, -2, -3]
-</pre>
-{% else %}
-<pre class="brush: python">checkio([-20, -5, 10, 15]) == [-5, 10, 15, -20]
-checkio([1, 2, 3, 0]) == [0, 1, 2, 3]
-checkio([-1, -2, -3, 0]) == [0, -1, -2, -3]
-</pre>
-{% endif %}
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
 </div>
 
 <p class="for_info_only">
