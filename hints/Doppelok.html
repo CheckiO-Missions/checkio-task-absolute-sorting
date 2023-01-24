@@ -1,52 +1,74 @@
 <body data-author="Doppelok">
 <div class="question-answer">
     <div class="question">
-        I have no idea how to start solving this mission
+        <p>
+            I have no idea how to start solving this mission.
+        </p>
     </div>
     <div class="answer">
-        First, read about these functions <a href="http://docs.python.org/2/library/functions.html#sorted">sorted()</a> and
-    <a href="http://docs.python.org/2/library/functions.html#abs">abs()</a>. >
+        <p>
+            First, read about these functions <a target="_blank" href="http://docs.python.org/2/library/functions.html#sorted">sorted()</a> and <a target="_blank" href="http://docs.python.org/2/library/functions.html#abs">abs()</a>.
+        </p>
     </div>
 </div>
 <div class="question-answer">
     <div class="question">
-        I have gone halfway through. Need help!
+        <p>
+            I have gone halfway through. Need help!
+        </p>
     </div>
     <div class="answer">
-        Look how work sorted() and abs():
+        <p>
+            Look how <b class="code">sorted()</b> and <b class="code">abs()</b> work:
+        </p>
         <pre class="brush: python">
-a = abs(-5)  # Returns the absolute value of a number
-b = sorted([1, 5, 2, -3])  # Returns a sorted iterable object
+# Returns the absolute value of a number            
+a = abs(-5)  
+# Returns a sorted iterable object
+b = sorted([1, 5, 2, -3])  
 print(a)
 print(b)
-
-# output:
-5
-[-3, 1, 2, 5]
         </pre>
+        <div class="output">
+            <p>Output:</p>
+            <pre>
+5
+[-3, 1, 2, 5]        
+            </pre>
+        </div>
     </div>
 </div>
 <div class="question-answer">
     <div class="question">
-        I need some help to proceed with the mission
+        <p>
+            I need some help to proceed with the mission.
+        </p>
     </div>
     <div class="answer">
-        You should try to use <a href="https://wiki.python.org/moin/HowTo/Sorting/#Key_Functions">the "key" parameter for sorted function</a>.
-
-<pre class="brush: python">
-#For example, sort lists by sums.
+        <p>
+            You should try to use <a target="_blank" href="https://wiki.python.org/moin/HowTo/Sorting/#Key_Functions">the <b class="code">key</b> parameter for <b class="code">sorted</b> function</a>.
+        </p>
+        <pre class="brush: python">
+# For example, sort lists by sums.
 c = sorted([[90, 11], [99, 1], [200], [30, 50, 50]], key=sum)
 # Function "sum" in "key" will be executed for each element to decide the order.
 print(c)
-
-# output
-[[99, 1], [90, 11], [30, 50, 50], [200]]
-    </pre>
-"key" doesn't change elements.
+        </pre>
+        <div class="output">
+            <p>Output:</p>
+            <pre>
+[[99, 1], [90, 11], [30, 50, 50], [200]]        
+            </pre>
+        </div>
+        <p>
+            <b class="code">key</b> doesn't change elements.
+        </p>
     </div>
 <div class="question-answer">
     <div class="question">
-        One last question. How my final solution will look like?
+        <p>
+            One last question. How my final solution will look like?
+        </p>
     </div>
     <div class="answer">
         <pre class="brush: python">
@@ -56,11 +78,15 @@ def checkio(values: list) -> list:
 </div>
 <div class="question-answer">
     <div class="question">
-        I want to be the best of the best PROGRAMMER!!! SHOW ME MORE SOLUTIONS!!1!!!11!
+        <p>
+            I want to be the best of the best PROGRAMMER!!! SHOW ME MORE SOLUTIONS!!1!!!11!
+        </p>
     </div>
     <div class="answer">
-        Okay, okay! That's the spirit!=)
+        <p>
+            Okay, okay! That's the spirit!=)
         This solution use lambda-function. You can see, that our previous solution we can write in one-line expression.
+        </p>
         <pre class="brush: python">
 checkio = lambda n: sorted(n, key=abs)
         </pre>
@@ -68,31 +94,38 @@ checkio = lambda n: sorted(n, key=abs)
 </div>
 <div class="question-answer">
     <div class="question">
-        I want more!
+        <p>
+            I want more!
+        </p>
     </div>
     <div class="answer">
-        Look at this solution. You can combine sorted function and lamda in def-function.
+        <p>
+            Look at this solution. You can combine sorted function and lambda in def-function.
+        </p>
         <pre class="brush: python">
 def checkio(numbers_array: tuple) -> list:
+
     return sorted(numbers_array, key=lambda x: abs(x))
         </pre>
     </div>
 </div>
 <div class="question-answer">
     <div class="question">
-        I said more!
+        <p>
+            I said more!
+        </p>
     </div>
     <div class="answer">
-        Look, look! In general, you don't need to use sorted function.
-        If you have deal with lists use list method "list.sort()".
-        But careful, this method change the list, but return "None".
+        <p>
+            Look, look! In general, you don't need to use sorted function. If you have deal with lists use list method <b class="code">list.sort()</b>. But careful, this method change the list, but return <b class="code">None</b>.
+        </p>
         <pre class="brush: python">
 def checkio(values: list) -> list:
-    values.sort(key=lambda x:abs(x))
+
+    values.sort(key = lambda x: abs(x))
+
     return values
         </pre>
     </div>
 </div>
-
-
 </body>
