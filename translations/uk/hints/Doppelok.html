@@ -74,10 +74,13 @@ print(c)
         </p>
     </div>
     <div class="answer">
+        <div class="spoiler">
         <pre class="brush: python">
 def checkio(values: list) -> list:
 
     return sorted(values, key=abs)
+        </pre>
+        </div>
 </div>
 <div class="question-answer">
     <div class="question">
@@ -89,9 +92,11 @@ def checkio(values: list) -> list:
         <p>
             Добре, добре! Оце настрій!=) Це рішення використовує lambda-функцію. Бачиш, що наше попереднє рішення можна записати в однорядковий вираз.
         </p>
+        <div class="spoiler">
         <pre class="brush: python">
 checkio = lambda n: sorted(n, key=abs)
         </pre>
+        </div>
     </div>
 </div>
 <div class="question-answer">
@@ -104,11 +109,13 @@ checkio = lambda n: sorted(n, key=abs)
         <p>
             Подивись на цей розв'язок. Ти можеш поєднати функцію <b class="code">sorted</b> та  <b class="code">lambda</b> інакше.
         </p>
+        <div class="spoiler">
         <pre class="brush: python">
 def checkio(numbers_array: list) -> list:
 
     return sorted(numbers_array, key=lambda x: abs(x))
         </pre>
+        </div>
     </div>
 </div>
 <div class="question-answer">
@@ -121,6 +128,7 @@ def checkio(numbers_array: list) -> list:
         <p>
             Дивись, дивись! Взагалі, ти можеш не використовувати функцію <b class="code">sorted</b>. Якщо ти маєш справу зі списком, можеш використати метод списків <b class="code">list.sort()</b>. Але обережно, цей метод змінює сам список, але повертає у відповідь <b class="code">None</b>.
         </p>
+        <div class="spoiler">
         <pre class="brush: python">
 def checkio(values: list) -> list:
 
@@ -128,6 +136,7 @@ def checkio(values: list) -> list:
 
     return values
         </pre>
+        </div>
     </div>
 </div>
 </body>
