@@ -71,10 +71,13 @@ print(c)
         </p>
     </div>
     <div class="answer">
+        <div class="spoiler">
         <pre class="brush: python">
 def checkio(values: list) -> list:
 
     return sorted(values, key=abs)
+        </pre>
+        </div>
 </div>
 <div class="question-answer">
     <div class="question">
@@ -87,9 +90,11 @@ def checkio(values: list) -> list:
             Okay, okay! That's the spirit!=)
         This solution use lambda-function. You can see, that our previous solution we can write in one-line expression.
         </p>
+        <div class="spoiler">
         <pre class="brush: python">
 checkio = lambda n: sorted(n, key=abs)
         </pre>
+        </div>
     </div>
 </div>
 <div class="question-answer">
@@ -102,11 +107,13 @@ checkio = lambda n: sorted(n, key=abs)
         <p>
             Look at this solution. You can combine sorted function and lambda in def-function.
         </p>
+        <div class="spoiler">
         <pre class="brush: python">
 def checkio(numbers_array: tuple) -> list:
 
     return sorted(numbers_array, key=lambda x: abs(x))
         </pre>
+        </div>
     </div>
 </div>
 <div class="question-answer">
@@ -119,6 +126,7 @@ def checkio(numbers_array: tuple) -> list:
         <p>
             Look, look! In general, you don't need to use sorted function. If you have deal with lists use list method <b class="code">list.sort()</b>. But careful, this method change the list, but return <b class="code">None</b>.
         </p>
+        <div class="spoiler">
         <pre class="brush: python">
 def checkio(values: list) -> list:
 
@@ -126,6 +134,7 @@ def checkio(values: list) -> list:
 
     return values
         </pre>
+        </div>
     </div>
 </div>
 </body>
