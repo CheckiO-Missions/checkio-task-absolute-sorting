@@ -3,50 +3,43 @@
 
 
 <p>
-    Let's try some sorting. Here is an array with the specific rules.
+    Let's try some sorting. Here is an {% if is_js %}<span translate="repeat">array</span>{% else %}<span translate="repeat">list</span>{% endif %} with the specific rules.
 </p>
 
 <p>
-    The array
-    {% if "python" in interpreter|lower %}
-    (a list)
-    {% endif %}
+    The {% if is_js %}<span translate="repeat">array</span>{% else %}<span translate="repeat">list</span>{% endif %}
     has various numbers. You should sort it, but sort it by absolute value in ascending order.
     For example, the sequence (-20, -5, 10, 15) will be sorted like so: (-5, 10, 15, -20).
-    Your function should return the sorted list {% if "python" in interpreter|lower %} or tuple{% endif %}.
+    Your function should return the sorted {% if is_js %}<span translate="repeat">array</span>{% else %}<span translate="repeat">list</span> or <span translate="repeat">tuple</span>{% endif %}.
+</p>
+<p>
+    <strong>Input:</strong> {% if is_js %}An <span translate="repeat">array</span> of <span translate="repeat">numbers</span>{% else %}A <span translate="repeat">list</span> of <span translate="repeat">integers</span>{% endif %}.
 </p>
 
 <p>
-    <strong>Precondition:</strong> The numbers in the array are unique by their absolute values.
-</p>
-<p>
-    <strong>Input: </strong> An array of numbers {% if "python" in interpreter|lower %}, a tuple.{% endif %}.
-</p>
-
-<p>
-    <strong>Output: </strong> The list or tuple (but not a generator) sorted by absolute values in ascending order.
+    <strong>Output:</strong> Sorted {% if is_js %}<span translate="repeat">array</span> of <span translate="repeat">numbers</span>{% else %}<span translate="repeat">list</span> or <span translate="repeat">tuple</span> of <span translate="repeat">integers</span>{% endif %}.
 </p>
 
 
 <p>
-    <strong>Addition: </strong> The results of your function will be shown as a list in the tests explanation panel.
+    <strong>Addition:</strong> The results of your function will be shown as {% if is_js %}an <span translate="repeat">array</span>{% else %}a <span translate="repeat">list</span>{% endif %} in the tests explanation panel.
 </p>
 
 
 <div class="for_info_only">
     <p>
-        <strong>Example:</strong>
+        <strong>Examples:</strong>
     </p>
 <pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
 </div>
 
 <p class="for_info_only">
-    <strong>How it is used: </strong>
+    <strong>How it is used:</strong>
     Sorting is a part of many tasks, so it will be useful to know how to use it.
 </p>
 
 <p>
-    <strong>Precondition</strong>:
+    <strong>Preconditions:</strong>
     len(set(abs(x) for x in array)) == len(array)<br>
     0 &lt; len(array) &lt; 100<br>
     all(isinstance(x, int) for x in array)<br>
