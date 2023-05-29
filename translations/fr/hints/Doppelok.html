@@ -22,9 +22,9 @@
             Regardez comment fonctionnent <b class="code">sorted()</b> et <b class="code">abs()</b>:
         </p>
         <pre class="brush: python">
-# Returns the absolute value of a number            
+# Renvoie la valeur absolue d'un nombre            
 a = abs(-5)  
-# Returns a sorted iterable object
+# Renvoie un objet itérable trié
 b = sorted([1, 5, 2, -3])  
 print(a)
 print(b)
@@ -49,9 +49,9 @@ print(b)
             Vous devriez essayer d'utiliser <a target="_blank" href="https://wiki.python.org/moin/HowTo/Sorting/#Key_Functions">the <b class="code">key</b> parameter for <b class="code">sorted</b> function</a>.
         </p>
         <pre class="brush: python">
-# For example, sort lists by sums.
+# Par exemple, trier les listes par sommes
 c = sorted([[90, 11], [99, 1], [200], [30, 50, 50]], key=sum)
-# Function "sum" in "key" will be executed for each element to decide the order.
+# La fonction "sum" dans "key" sera exécutée pour chaque élément afin de déterminer l'ordre.
 print(c)
         </pre>
         <div class="output">
