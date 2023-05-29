@@ -3,21 +3,20 @@
 
 
 <p>
-    Essayons de faire un tri. Voici un<span>tableau</span> {% if is_js %}<span></span> <span>(array)</span><span> </span>{% else %} <span>liste</span> <span>(list)</span>{% endif %} avec les règles spécifiques.
+    Essayons de faire un tri. Voici un {% if is_js %}<span>tableau</span> <span>(array)</span>{% else %}<span>liste</span> <span>(list)</span>{% endif %} avec les règles spécifiques.
 </p>
 
 <p>
-    Le<span>tableau</span> {% if is_js %}<span></span> <span>(array)</span><span> </span>{% else %} <span>liste</span> <span>(list)</span>{% endif %}
-    contient plusieurs nombres. Vous devez la trier, mais par valeur absolue et par ordre croissant.
+    Le {% if is_js %}<span>tableau</span> <span>(array)</span>{% else %}<span>liste</span> <span>(list)</span>{% endif %} contient plusieurs nombres. Vous devez la trier, mais par valeur absolue et par ordre croissant.
     Par exemple, la séquence (-20, -5, 10, 15) sera triée comme suit: (-5, 10, 15, -20).
-    Votre fonction doit renvoyer le<span>tableau</span> trié {% if is_js %} <span>(array)</span><span> </span>{% else %} <span>la liste</span> <span>(list)</span> ou le <span>tuple</span>{% endif %}.
+    Votre fonction doit renvoyer le trié {% if is_js %}<span>tableau</span> <span>(array)</span>{% else %}<span>la liste</span> <span>(list)</span> ou le <span>tuple</span>{% endif %}.
 </p>
 <p>
    <strong>Entrée:</strong> {% if is_js %}Un <span>tableau</span> <span>(array)</span> de <span>nombres</span> <span>(numbers)</span>{% else %} Une <span>liste</span> <span>(list)</span> d'<span>entiers</span> <span>(integers)</span>{% endif %}.
 </p>
 
 <p>
-   <strong>Sortie:</strong><span>Tableau</span> {% if is_js %}<span></span> trié <span>(array)</span> de <span>nombres</span> <span>(numbers)</span>{% else %}<span>liste</span> <span>(list)</span> ou <span>tuple</span> d'<span>entiers</span> <span>(integers)</span>{% endif %}.
+   <strong>Sortie:</strong> {% if is_js %}<span>Tableau</span> trié <span>(array)</span> de <span>nombres</span> <span>(numbers)</span>{% else %}<span>Liste</span> <span>(list)</span> ou <span>tuple</span> d'<span>entiers</span> <span>(integers)</span>{% endif %}.
 </p>
 
 
