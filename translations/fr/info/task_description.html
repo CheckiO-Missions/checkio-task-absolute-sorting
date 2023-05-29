@@ -1,68 +1,47 @@
-<img class="for_info_only" title="X" src="{{MEDIA}}X.png" alt="X"
-     style="width: 300px;float: left; margin-top: 30px; "/>
+<img class="for_info_only half" title="X" src="{{MEDIA}}X.png" alt="X"
+     style="float: left"/>
+
 
 <p>
-    Essayons maintenant de trier une liste avec quelques r&egrave;gles sp&eacute;cifiques.
+    Essayons de faire un tri. Voici un<span>tableau</span> {% if is_js %}<span></span> <span>(array)</span><span> </span>{% else %} <span>liste</span> <span>(list)</span>{% endif %} avec les règles spécifiques.
 </p>
 
 <p>
-    La liste
-    {% if "python" in interpreter|lower %}
-    (un list)
-    {% endif %}
-    contient plusieurs nombres. Vous devez trier ces nombres, par ordre croissant de valeur absolue.
-    Par exemple, la s&eacute;quence (-20, -5, 10, 15) sera tri&eacute;e comme suit : (-5, 10, 15, -20).
-    Votre fonction doit retourner la liste tri&eacute;e {% if "python" in interpreter|lower %} ou le tuple tri&eacute;{% endif %}.
+    Le<span>tableau</span> {% if is_js %}<span></span> <span>(array)</span><span> </span>{% else %} <span>liste</span> <span>(list)</span>{% endif %}
+    contient plusieurs nombres. Vous devez la trier, mais par valeur absolue et par ordre croissant.
+    Par exemple, la séquence (-20, -5, 10, 15) sera triée comme suit: (-5, 10, 15, -20).
+    Votre fonction doit renvoyer le<span>tableau</span> trié {% if is_js %} <span>(array)</span><span> </span>{% else %} <span>la liste</span> <span>(list)</span> ou le <span>tuple</span>{% endif %}.
+</p>
+<p>
+   <strong>Entrée:</strong> {% if is_js %}Un <span>tableau</span> <span>(array)</span> de <span>nombres</span> <span>(numbers)</span>{% else %} Une <span>liste</span> <span>(list)</span> d'<span>entiers</span> <span>(integers)</span>{% endif %}.
 </p>
 
 <p>
-    <strong>Conseils : </strong> Vous pouvez facilement r&eacute;soudre cette mission avec fonctions suivantes :
-    {% if "python 2" in interpreter|lower %}
-    <a href="http://docs.python.org/2/tutorial/introduction.html#lists">sorted</a> et
-    <a href="http://docs.python.org/2/tutorial/introduction.html#strings">abs</a>.
-    Vous devez essayer d'utiliser <a href="http://docs.python.org/2/library/functions.html#sum"> le param&egrave;tre key de la fonction de tri</a>.
-    {% else %}
-    <a href="http://docs.python.org/3/tutorial/introduction.html#lists">sorted</a> et
-    <a href="http://docs.python.org/3/tutorial/introduction.html#strings">abs</a>.
-    Vous devez essayer d'utiliser <a href="http://docs.python.org/3/library/functions.html#sum"> le param&egrave;tre key de la fonction de tri</a>.
-    {% endif %}
-</p>
-
-<p>
-    <strong>Pr&eacute;condition : </strong> Les nombres de la liste ont tous des valeurs absolues différentes.
-</p>
-<p>
-    <strong>Entr&eacute;e : </strong> Une liste de nombres {% if "python" in interpreter|lower %}, ou un tuple de nombres.{% endif %}.
-</p>
-
-<p>
-    <strong>Sortie : </strong> Une liste (ou un tuple, mais pas un g&eacute;n&eacute;rateur) de nombres tri&eacute;e 
-    par ordre croissant de valeur absolue.
+   <strong>Sortie:</strong><span>Tableau</span> {% if is_js %}<span></span> trié <span>(array)</span> de <span>nombres</span> <span>(numbers)</span>{% else %}<span>liste</span> <span>(list)</span> ou <span>tuple</span> d'<span>entiers</span> <span>(integers)</span>{% endif %}.
 </p>
 
 
 <p>
-    <strong>Compl&eacute;ment : </strong> Les r&eacute;sultats de votre fonction seront affich&eacute;s en tant 
-    que liste dans le volet d'explication des tests.
+   <strong>Addition:</strong> Les résultats de votre fonction seront affichés sous la forme {% if is_js %}d'un <span>tableau</span> <span>(array)</span>{% else %} d'une <span>liste</span> <span>(list)</span>{% endif %} dans le panneau d'explication des tests.
 </p>
 
 
 <div class="for_info_only">
     <p>
-        <strong>Exemple : </strong>
+        <strong>Exemples:</strong>
     </p>
 <pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
 </div>
 
 <p class="for_info_only">
-    <strong>&Agrave; quoi cela sert : </strong>
-    Il est utile de savoir trier des listes dans de nombreuses de missions.
+   <strong>Comment l'utiliser:</strong>
+    Le tri fait partie de nombreuses tâches, il est donc utile de savoir comment l'utiliser.
 </p>
 
 <p>
-    <strong>Pr&eacute;condition : </strong>:
-    len(set(abs(x) for x in liste)) == len(liste)<br>
-    0 &lt; len(liste) &lt; 100<br>
-    all(isinstance(x, int) for x in liste)<br>
-    all(-100 &lt; x &lt; 100 for x in liste)<br>
+   <strong>Conditions préalables:</strong>
+    len(set(abs(x) for x in array)) == len(array)<br>
+    0 &lt; len(array) &lt; 100<br>
+    all(isinstance(x, int) for x in array)<br>
+    all(-100 &lt; x &lt; 100 pour x dans le tableau)<br>
 </p>
