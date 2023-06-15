@@ -1,0 +1,138 @@
+<body data-author="Doppelok">
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Nie mam pojęcia, jak zacząć rozwiązywać tę misję.
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Najpierw proszę poczytać o tych funkcjach <a target="_blank" href="http://docs.python.org/2/library/functions.html#sorted">sorted()</a> i <a target="_blank" href="http://docs.python.org/2/library/functions.html#abs">abs()</a>.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Przeszedłem przez połowę. Proszę o pomoc!
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Proszę spojrzeć, jak działają strony <b class="code">sorted()</b> i <b class="code">abs()</b>:
+        </p>
+        <pre class="brush: python">
+# Returns the absolute value of a number            
+a = abs(-5)  
+# Returns a sorted iterable object
+b = sorted([1, 5, 2, -3])  
+print(a)
+print(b)
+        </pre>
+        <div class="output">
+            <p>Wyjście:</p>
+            <pre>
+5
+[-3, 1, 2, 5]</pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Potrzebuję pomocy, aby kontynuować misję.
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Proszę spróbować użyć <a target="_blank" href="https://wiki.python.org/moin/HowTo/Sorting/#Key_Functions">the <b class="code">key</b> parameter for <b class="code">sorted</b> function</a>.
+        </p>
+        <pre class="brush: python">
+# For example, sort lists by sums.
+c = sorted([[90, 11], [99, 1], [200], [30, 50, 50]], key=sum)
+# Function "sum" in "key" will be executed for each element to decide the order.
+print(c)
+        </pre>
+        <div class="output">
+            <p>Wyjście:</p>
+            <pre>
+[[99, 1], [90, 11], [30, 50, 50], [200]]</pre>
+        </div>
+        <p>
+            <b class="code">key</b> nie zmienia elementów.
+        </p>
+    </div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Ostatnie pytanie. Jak będzie wyglądało moje ostateczne rozwiązanie?
+        </p>
+    </div>
+    <div class="answer">
+        <div class="spoiler">
+        <pre class="brush: python">
+def checkio(values: list) -> list:
+
+    return sorted(values, key=abs)
+        </pre>
+        </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Chcę być najlepszym z najlepszych PROGRAMISTÓW!!! PROSZĘ POKAZAĆ MI WIĘCEJ ROZWIĄZAŃ!!!1!!!11!
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Dobra, dobra! To jest duch!=)
+        To rozwiązanie wykorzystuje funkcję lambda. Proszę zauważyć, że nasze poprzednie rozwiązanie możemy zapisać w jednowierszowym wyrażeniu.
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+checkio = lambda n: sorted(n, key=abs)
+        </pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Chcę więcej!
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Proszę spojrzeć na to rozwiązanie. Mogą Państwo połączyć funkcję sortowaną i lambdę w def-function.
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def checkio(numbers_array: tuple) -> list:
+
+    return sorted(numbers_array, key=lambda x: abs(x))
+        </pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Powiedziałem więcej!
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Proszę spojrzeć! Ogólnie rzecz biorąc, nie trzeba używać funkcji sortowania. Jeśli mają Państwo do czynienia z listami, proszę użyć metody list <b class="code">list.sort()</b>. Ale proszę uważać, ta metoda zmienia listę, ale zwraca <b class="code">None</b>.
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def checkio(values: list) -> list:
+
+    values.sort(key = lambda x: abs(x))
+
+    return values
+        </pre>
+        </div>
+    </div>
+</div>
+</body>

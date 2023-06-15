@@ -1,0 +1,44 @@
+<img class="for_info_only half" title="X" src="{{MEDIA}}X.png" alt="X"
+     style="float: left"/>
+
+
+<p>
+    Proszę spróbować posortować. Oto sekwencja z określonymi regułami.
+</p>
+
+<p>
+    Sekwencja zawiera różne liczby. Proszę go posortować, ale według wartości bezwzględnej w porządku rosnącym. Na przykład sekwencja (-20, -5, 10, 15) zostanie posortowana w następujący sposób: (-5, 10, 15, -20). Funkcja powinna zwrócić posortowaną tablicę {% if is_js %} <span>(array)</span> {% else %} listę <span>(list)</span> lub krotkę <span>(tuple)</span>{% endif %}.
+</p>
+<p>
+   <strong>Dane wejściowe:</strong> {% if is_js %}Tablica{% else %}Lista{% endif %} <span>({% if is_js %}Array{% else %}List{% endif %})</span> liczb całkowitych <span>{% if is_js %}(number){% else %}(int){% endif %}</span>.
+</p>
+
+<p>
+   <strong>Dane wyjściowe:</strong> Posortowana tablica {% if is_js %}{% else %} lista{% endif %} <span>({% if is_js %}array{% else %}list{% endif %})</span> liczb całkowitych <span>{% if is_js %}(number){% else %}(int){% endif %}</span>.
+</p>
+
+
+<p>
+   <strong>Dodawanie:</strong> Wyniki Państwa funkcji zostaną wyświetlone jako tablica {% if is_js %}{% else %} lista{% endif %} <span>({% if is_js %}array{% else %}list{% endif %})</span> w panelu objaśnień testów.
+</p>
+
+
+<div class="for_info_only">
+    <p>
+        <strong>Przykłady:</strong>
+    </p>
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+</div>
+
+<p class="for_info_only">
+   <strong>Jak to jest używane:</strong>
+    Sortowanie jest częścią wielu zadań, więc warto wiedzieć, jak z niego korzystać.
+</p>
+
+<p>
+   <strong>Warunki wstępne:</strong>
+    len(set(abs(x) for x in array)) == len(array)<br>
+    0 &lt; len(array) &lt; 100<br>
+    all(isinstance(x, int) for x in array)<br>
+    all(-100 &lt; x &lt; 100 for x in array)<br>
+</p>
