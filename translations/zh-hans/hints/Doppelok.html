@@ -1,0 +1,138 @@
+<body data-author="Doppelok">
+<div class="question-answer">
+    <div class="question">
+        <p>
+            我不知道如何开始解决这项任务。
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            首先，请阅读<a target="_blank" href="http://docs.python.org/2/library/functions.html#sorted">sorted()</a> 和<a target="_blank" href="http://docs.python.org/2/library/functions.html#abs">abs()</a> 这两个函数。
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            我已经读了一半。需要帮助！
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            看看<b class="code">sorted()</b> 和<b class="code">abs()</b> 是如何工作的：
+        </p>
+        <pre class="brush: python">
+# Returns the absolute value of a number            
+a = abs(-5)  
+# Returns a sorted iterable object
+b = sorted([1, 5, 2, -3])  
+print(a)
+print(b)
+        </pre>
+        <div class="output">
+            <p>输出：</p>
+            <pre>
+5
+[-3, 1, 2, 5]</pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            我需要一些帮助来完成任务。
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            您应该尝试使用 <a target="_blank" href="https://wiki.python.org/moin/HowTo/Sorting/#Key_Functions">the <b class="code">key</b> parameter for <b class="code">sorted</b> function</a>.
+        </p>
+        <pre class="brush: python">
+# For example, sort lists by sums.
+c = sorted([[90, 11], [99, 1], [200], [30, 50, 50]], key=sum)
+# Function "sum" in "key" will be executed for each element to decide the order.
+print(c)
+        </pre>
+        <div class="output">
+            <p>输出：</p>
+            <pre>
+[[99, 1], [90, 11], [30, 50, 50], [200]]</pre>
+        </div>
+        <p>
+            <b class="code">key</b> 不改变元素。
+        </p>
+    </div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            最后一个问题。我的最终解决方案是什么样的？
+        </p>
+    </div>
+    <div class="answer">
+        <div class="spoiler">
+        <pre class="brush: python">
+def checkio(values: list) -> list:
+
+    return sorted(values, key=abs)
+        </pre>
+        </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            我想成为最优秀的程序员！给我看更多的解决方案！！！1！！！11！
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            好的，好的！这就是精神！=)
+        这个解决方案使用了lambda函数。你可以看到，我们之前的解决方案可以写成一行表达式。
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+checkio = lambda n: sorted(n, key=abs)
+        </pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            我想要更多！
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            看看这个解决方案。您可以在def-function中结合排序函数和lambda。
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def checkio(numbers_array: tuple) -> list:
+
+    return sorted(numbers_array, key=lambda x: abs(x))
+        </pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            我说得更多！
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            听着，听着！一般来说，你不需要使用sorted函数。如果你要处理列表，使用列表方法<b class="code">list.sort()</b> 。但是要小心，这个方法改变了列表，但是返回<b class="code">None</b> 。
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def checkio(values: list) -> list:
+
+    values.sort(key = lambda x: abs(x))
+
+    return values
+        </pre>
+        </div>
+    </div>
+</div>
+</body>
