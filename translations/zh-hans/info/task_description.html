@@ -1,0 +1,44 @@
+<img class="for_info_only half" title="X" src="{{MEDIA}}X.png" alt="X"
+     style="float: left"/>
+
+
+<p>
+    让我们试试排序。下面是具有特定规则的序列。
+</p>
+
+<p>
+    序列中有各种数字。您应该对其进行排序，但是要按照绝对值升序进行排序。例如，序列(-20, -5, 10, 15)将这样排序：(-5, 10, 15, -20).您的函数应该返回排序后的{% if is_js %}数组<span>(array)</span>{% else %} 列表<span>(list)</span> 或元组<span>(tuple)</span>{% endif %} 。
+</p>
+<p>
+   <strong>输入：</strong> {% if is_js %}数组{% else %}列表{% endif %} <span>({% if is_js %}Array{% else %}List{% endif %})</span>整数 <span>{% if is_js %}(number){% else %}(int){% endif %}</span>.
+</p>
+
+<p>
+   <strong>输出：</strong>排序的{% if is_js %}数组{% else %}列表{% endif %} <span>({% if is_js %}array{% else %}list{% endif %})</span>的整数 <span>{% if is_js %}(number){% else %}(int){% endif %}</span>.
+</p>
+
+
+<p>
+   <strong>加法：</strong>函数的结果将以{% if is_js %}数组{% else %}列表{% endif %} 的形式显示在测试解释面板中。 <span>({% if is_js %}array{% else %}list{% endif %})</span>在测试解释面板中。
+</p>
+
+
+<div class="for_info_only">
+    <p>
+        <strong>举例说明：</strong>
+    </p>
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+</div>
+
+<p class="for_info_only">
+   <strong>如何使用</strong>
+    排序是许多任务的一部分，因此了解如何使用它将非常有用。
+</p>
+
+<p>
+   <strong>前提条件</strong>
+    len(set(abs(x) for x in array)) == len(array)<br>
+    0 &lt; len(array) &lt; 100<br>
+    all(isinstance(x, int) for x in array)<br>
+    all(-100 &lt; x &lt; 100 for x in array)<br>
+</p>
