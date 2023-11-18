@@ -1,54 +1,44 @@
 <img src="{{MEDIA_CONVERT}}title.png" class="title_img" />
-     style="float: left"/>
+     style="float: left"/&gt
 
 
 <p>
-    Versuchen wir's mit etwas Sortieren. Hier ist ein Array mit den spezifischen Regeln. 
+    Lassen Sie uns eine Sortierung ausprobieren. Hier ist eine Sequenz mit den spezifischen Regeln.
 </p>
 
 <p>
-    Das Array
-    {% if "python" in interpreter|lower %}
-    (a list)
-    {% endif %}
-    enthält verschiedene Zahlen. Du solltest es sortieren, aber nach den Absolutbeträgen der Zahlen in aufsteigender Folge.
-    Zum Beispiel, die Folge (-20, -5, 10, 15) sollte wie folgt sortiert sein: (-5, 10, 15, -20).
-    Deine Funktion sollte eine sortierte Liste {% if "python" in interpreter|lower %} oder ein Tupel {% endif %} zurückgeben.
+    Die Sequenz enthält verschiedene Zahlen. Sie sollten sie sortieren, aber nach dem absoluten Wert in aufsteigender Reihenfolge. Zum Beispiel wird die Folge (-20, -5, 10, 15) so sortiert: (-5, 10, 15, -20). Ihre Funktion sollte das sortierte {% if is_js %}Array <span>(array)</span>{% else %} Liste <span>(list)</span> oder Tupel <span>(tuple)</span>{% endif %} zurückgeben.
+</p>
+<p>
+   <strong>Eingabe:</strong> {% if is_js %}Array{% else %}Liste{% endif %} <span>({% if is_js %}Array{% else %}List{% endif %})</span> von ganzen Zahlen <span>{% if is_js %}(number){% else %}(int){% endif %}</span>.
 </p>
 
 <p>
-    <strong>Voraussetzung:</strong> Jede Zahl im Arrray ist einmalig in ihrem Absolutbetrag.
-</p>
-<p>
-    <strong>Eingabe: </strong> Ein Array von Zahlen {% if "python" in interpreter|lower %}, ein Tupel{% endif %}.
-</p>
-
-<p>
-    <strong>Ausgabe: </strong> Die Liste oder das Tupel (aber kein Generator-Objekt) sortiert nach Absolutbeträgen und aufsteigender Folge.
+   <strong>Ausgabe:</strong> Sortiertes {% if is_js %}Array{% else %}Liste{% endif %} <span>({% if is_js %}array{% else %}list{% endif %})</span> von ganzen Zahlen <span>{% if is_js %}(number){% else %}(int){% endif %}</span>.
 </p>
 
 
 <p>
-    <strong>Ergänzung: </strong> Die Resultate Deiner Funktion werden als Liste im Erläuterungsfenster des Tests angezeigt.
+   <strong>Addition:</strong> Die Ergebnisse Ihrer Funktion werden als {% if is_js %}Array{% else %}Liste{% endif %} <span>({% if is_js %}array{% else %}list{% endif %})</span> in der Erklärungstafel der Tests angezeigt.
 </p>
 
 
 <div class="for_info_only">
     <p>
-        <strong>Beispiel:</strong>
+        <strong>Beispiele:</strong>
     </p>
 <pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
 </div>
 
 <p class="for_info_only">
-    <strong>Wozu ist das gut: </strong>
-    Sortieren ist Teil vieler Aufgaben, also ist es nützlich, über die Anwendung Bescheid zu wissen.
+   <strong>Wie es verwendet wird:</strong>
+    Das Sortieren ist Teil vieler Aufgaben, daher ist es nützlich zu wissen, wie man es verwendet.
 </p>
 
 <p>
-    <strong>Bedingung</strong>:
+   <strong>Vorbedingungen:</strong>
     len(set(abs(x) for x in array)) == len(array)<br>
     0 &lt; len(array) &lt; 100<br>
-    all(isinstance(x, int) for x in array)<br>
-    all(-100 &lt; x &lt; 100 for x in array)<br>
+    all(isinstance(x, int) für x in array)<br>
+    all(-100 &lt; x &lt; 100 für x in array)<br>
 </p>
