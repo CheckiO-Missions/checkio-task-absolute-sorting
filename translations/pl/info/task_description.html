@@ -1,6 +1,4 @@
 <img src="{{MEDIA_CONVERT}}title.png" class="title_img" />
-     style="float: left"/>
-
 
 <p>
     Proszę spróbować posortować. Oto sekwencja z określonymi regułami.
@@ -9,6 +7,11 @@
 <p>
     Sekwencja zawiera różne liczby. Proszę go posortować, ale według wartości bezwzględnej w porządku rosnącym. Na przykład sekwencja (-20, -5, 10, 15) zostanie posortowana w następujący sposób: (-5, 10, 15, -20). Funkcja powinna zwrócić posortowaną tablicę {% if is_js %} <span>(array)</span> {% else %} listę <span>(list)</span> lub krotkę <span>(tuple)</span>{% endif %}.
 </p>
+
+<p style="text-align: center;">
+    <img  title="example" src="{{MEDIA}}abs-sort.svg" alt="example" style="max-height: 200px"/>
+</p>
+
 <p>
    <strong>Dane wejściowe:</strong> {% if is_js %}Tablica{% else %}Lista{% endif %} <span>({% if is_js %}Array{% else %}List{% endif %})</span> liczb całkowitych <span>{% if is_js %}(number){% else %}(int){% endif %}</span>.
 </p>

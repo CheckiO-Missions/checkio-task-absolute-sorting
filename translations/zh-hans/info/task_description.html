@@ -1,6 +1,4 @@
 <img src="{{MEDIA_CONVERT}}title.png" class="title_img" />
-     style="float: left"/>
-
 
 <p>
     让我们试试排序。下面是具有特定规则的序列。
@@ -9,6 +7,11 @@
 <p>
     序列中有各种数字。您应该对其进行排序，但是要按照绝对值升序进行排序。例如，序列(-20, -5, 10, 15)将这样排序：(-5, 10, 15, -20).您的函数应该返回排序后的{% if is_js %}数组<span>(array)</span>{% else %} 列表<span>(list)</span> 或元组<span>(tuple)</span>{% endif %} 。
 </p>
+
+<p style="text-align: center;">
+    <img  title="example" src="{{MEDIA}}abs-sort.svg" alt="example" style="max-height: 200px"/>
+</p>
+
 <p>
    <strong>输入：</strong> {% if is_js %}数组{% else %}列表{% endif %} <span>({% if is_js %}Array{% else %}List{% endif %})</span>整数 <span>{% if is_js %}(number){% else %}(int){% endif %}</span>.
 </p>
